@@ -1,22 +1,8 @@
-
-#include<iostream>
-using namespace std;
-void insert_sort(int arr[], int n)
-{
-    int temp;
-    int j;
-    for (int i = 1; i < n; i++)
-    {
-        //如果大于前驱，进行移动操作
-        if (arr[i] < arr[i - 1])
-        {
-            temp = arr[i];
-            for (j = i - 1; j>=0&& arr[j] > temp; j--)
             {
                 arr[j + 1] = arr[j];
             }
         }
-     
+
         arr[j+1] = temp;
     }
 
@@ -34,3 +20,4 @@ void insert_sort(int arr[], int n)
 
         return 0;
     }
+
