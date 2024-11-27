@@ -5,7 +5,7 @@ namespace adas
     {
         return new (std::nothrow)Executorlmpl(pose);
     }
-    Executorlmpl::Executorlmpl(const Pose& pose)noexcept
+    Executorlmpl::Executorlmpl(const Pose& pose)noexcept:pose(pose)
     {
         
     }
