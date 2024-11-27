@@ -70,4 +70,13 @@ namespace adas
  const Pose target({0, -1, 'S'});
     ASSERT_EQ(target, executor->Query());
     }
+
+    //复杂指令测试
+TEST(ExecutorTest,Complex_commands)
+{
+    std::unique_ptr<Executor> executor(Executor::NewExecutor({0, 0, 'N'}));
+    executor->Execute("MMRRLLLRRMM");
+     const Pose target({2, 2, 'E'});
+     ASSERT_EQ(target, executor->Query());
+}
 }
